@@ -3,9 +3,6 @@ from __future__ import division
 from __future__ import print_function
 
 from pascal_voc.dataset import PascalVocDataset
-# from pascal_voc.seg import get_colors, image_to_seg
-
-# colors = get_colors()
 
 with PascalVocDataset(mode='val', year=2012) as ds:
     max_h, max_w = 0, 0
