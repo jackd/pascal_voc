@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -5,9 +6,6 @@ from __future__ import print_function
 import numpy as np
 import matplotlib.pyplot as plt
 from pascal_voc.read_tar import TarData
-# from pascal_voc.seg import get_colors, image_to_seg
-
-# colors = get_colors()
 
 with TarData(mode='train') as data:
     example_ids = data.get_example_ids()
