@@ -5,33 +5,14 @@ Python implementation of the color map function for the PASCAL VOC data set.
 Official Matlab version can be found in the PASCAL VOC devkit
 http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html#devkit
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 import numpy as np
 from skimage.io import imshow
 import matplotlib.pyplot as plt
-
-labels = (
-    'background',
-    'aeroplane',
-    'bicycle',
-    'bird',
-    'boat',
-    'bottle',
-    'bus',
-    'car',
-    'cat',
-    'chair',
-    'cow',
-    'diningtable',
-    'dog',
-    'horse',
-    'motorbike',
-    'person',
-    'pottedplant',
-    'sheep',
-    'sofa',
-    'train',
-    'tvmonitor'
-)
+from .core import labels
 
 
 def image_to_seg(image, colormap, dtype=np.int32):
